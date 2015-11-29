@@ -11,4 +11,8 @@
         android:id="@+id/menu_recycleview"
         android:title="@string/menu_recyclerview" />
 
+    <item
+        android:id="@+id/menu_modern_feed"
+        android:title="@string/menu_modern_feed" />
+
 </menu>

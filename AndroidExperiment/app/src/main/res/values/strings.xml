@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Android Experiment</string>
 
+    <string name="title_activity_modern_feed">Modern Feed</string>
+    <string name="title_activity_recyclerview">RecyclerViewActivity</string>
+
+    <string name="menu_modern_feed">Modern Feed</string>
+    <string name="menu_recyclerview">RecyclerView</string>
+
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
-    <string name="menu_recyclerview">RecyclerView</string>
-    <string name="title_activity_recyclerview">RecyclerViewActivity</string>
 
 </resources>
