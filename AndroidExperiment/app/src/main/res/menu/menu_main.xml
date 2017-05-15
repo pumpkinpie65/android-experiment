@@ -15,4 +15,8 @@
         android:id="@+id/menu_modern_feed"
         android:title="@string/menu_modern_feed" />
 
+    <item
+        android:id="@+id/menu_constraintlayout_in_recyclerview"
+        android:title="@string/menu_constraintlayout_in_recyclerview" />
+
 </menu>

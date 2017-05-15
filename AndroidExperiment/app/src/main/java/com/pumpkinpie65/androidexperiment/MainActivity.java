@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.pumpkinpie65.androidexperiment.constraintlayoutinrecyclerview.ConstraintLayoutInRecyclerViewActivity;
 import com.pumpkinpie65.androidexperiment.modernfeed.ModernFeedActivity;
 
 
@@ -45,6 +46,11 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.menu_modern_feed) {
             Intent intent = new Intent(this, ModernFeedActivity.class);
             startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.menu_constraintlayout_in_recyclerview) {
+            startActivity(ConstraintLayoutInRecyclerViewActivity.newIntent(this));
             return true;
         }
 
