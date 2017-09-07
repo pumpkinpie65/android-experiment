@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 import com.pumpkinpie65.androidexperiment.constraintlayoutinrecyclerview.ConstraintLayoutInRecyclerViewActivity;
 import com.pumpkinpie65.androidexperiment.modernfeed.ModernFeedActivity;
+import com.pumpkinpie65.androidexperiment.structsandalgos.StructsAndAlgosActivity;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -51,6 +52,11 @@ public class MainActivity extends ActionBarActivity {
 
         if (id == R.id.menu_constraintlayout_in_recyclerview) {
             startActivity(ConstraintLayoutInRecyclerViewActivity.newIntent(this));
+            return true;
+        }
+
+        if (id == R.id.menu_structsandalgos) {
+            startActivity(StructsAndAlgosActivity.newIntent(this));
             return true;
         }
 

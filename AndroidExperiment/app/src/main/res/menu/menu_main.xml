@@ -19,4 +19,8 @@
         android:id="@+id/menu_constraintlayout_in_recyclerview"
         android:title="@string/menu_constraintlayout_in_recyclerview" />
 
+    <item
+        android:id="@+id/menu_structsandalgos"
+        android:title="@string/menu_structsandalgos" />
+
 </menu>
