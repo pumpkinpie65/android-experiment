@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item type="id" name="button" />
+    <item type="id" name="constraintlayout" />
+    <item type="id" name="edittext" />
     <item type="id" name="fab" />
     <item type="id" name="recyclerview" />
     <item type="id" name="textview" />
