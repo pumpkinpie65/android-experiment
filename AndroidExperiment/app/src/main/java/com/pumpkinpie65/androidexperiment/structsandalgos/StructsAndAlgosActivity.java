@@ -27,7 +27,8 @@ public class StructsAndAlgosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ConstraintLayout.LayoutParams inputViewLayoutParams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.WRAP_CONTENT);
+        //ConstraintLayout.LayoutParams inputViewLayoutParams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.WRAP_CONTENT);
+        ConstraintLayout.LayoutParams inputViewLayoutParams = new ConstraintLayout.LayoutParams(0, ConstraintLayout.LayoutParams.WRAP_CONTENT);
         inputViewLayoutParams.startToStart = ConstraintLayout.LayoutParams.PARENT_ID;
         inputViewLayoutParams.topToTop = ConstraintLayout.LayoutParams.PARENT_ID;
         inputViewLayoutParams.endToEnd = ConstraintLayout.LayoutParams.PARENT_ID;
@@ -40,8 +41,6 @@ public class StructsAndAlgosActivity extends AppCompatActivity {
         ((View) inputView).setLayoutParams(inputViewLayoutParams);
 
         constraintLayout.addView((View) inputView);
-
-        Toast.makeText(this, "child count: " + constraintLayout.getChildCount(), Toast.LENGTH_LONG).show();
 
         setContentView(constraintLayout);
 

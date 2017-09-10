@@ -21,7 +21,8 @@ public class InputViewImpl extends ConstraintLayout implements InputView {
     public InputViewImpl(Context context) {
         super(context);
 
-        ConstraintLayout.LayoutParams editTextLayoutParams = new ConstraintLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        //ConstraintLayout.LayoutParams editTextLayoutParams = new ConstraintLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        ConstraintLayout.LayoutParams editTextLayoutParams = new ConstraintLayout.LayoutParams(0, LayoutParams.WRAP_CONTENT);
         editTextLayoutParams.startToStart = LayoutParams.PARENT_ID;
         editTextLayoutParams.topToTop = LayoutParams.PARENT_ID;
         editTextLayoutParams.endToStart = R.id.button;
@@ -33,7 +34,7 @@ public class InputViewImpl extends ConstraintLayout implements InputView {
 
 
         ConstraintLayout.LayoutParams buttonLayoutParams = new ConstraintLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        buttonLayoutParams.startToEnd = R.id.button;
+        //buttonLayoutParams.startToEnd = R.id.button;
         buttonLayoutParams.topToTop = LayoutParams.PARENT_ID;
         buttonLayoutParams.endToEnd = LayoutParams.PARENT_ID;
         buttonLayoutParams.bottomToBottom = LayoutParams.PARENT_ID;
