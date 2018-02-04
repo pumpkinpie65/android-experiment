@@ -5,18 +5,22 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.pumpkinpie65.androidexperiment.R;
 
 public class StructsAndAlgosActivity extends AppCompatActivity {
 
-    ConstraintLayout constraintLayout;
-    InputView inputView;
+    TextInputLayout textInputLayout;
+    TextInputEditText textInputEditText;
+    View button;
 
     public static Intent newIntent(Context context) {
         Intent intent = new Intent(context, StructsAndAlgosActivity.class);
@@ -27,22 +31,11 @@ public class StructsAndAlgosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //ConstraintLayout.LayoutParams inputViewLayoutParams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.WRAP_CONTENT);
-        ConstraintLayout.LayoutParams inputViewLayoutParams = new ConstraintLayout.LayoutParams(0, ConstraintLayout.LayoutParams.WRAP_CONTENT);
-        inputViewLayoutParams.startToStart = ConstraintLayout.LayoutParams.PARENT_ID;
-        inputViewLayoutParams.topToTop = ConstraintLayout.LayoutParams.PARENT_ID;
-        inputViewLayoutParams.endToEnd = ConstraintLayout.LayoutParams.PARENT_ID;
-        inputViewLayoutParams.bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID;
+        setContentView(R.layout.structs_and_algos_activity);
 
-        constraintLayout = new ConstraintLayout(this);
-        constraintLayout.setId(R.id.constraintlayout);
-        inputView = new InputViewImpl(this);
-
-        ((View) inputView).setLayoutParams(inputViewLayoutParams);
-
-        constraintLayout.addView((View) inputView);
-
-        setContentView(constraintLayout);
+        textInputLayout = findViewById(R.id.textinputlayout);
+        textInputEditText = findViewById(R.id.edittext);
+        button = findViewById(R.id.button);
 
     }
 }

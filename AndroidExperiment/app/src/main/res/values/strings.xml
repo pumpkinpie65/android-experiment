@@ -13,4 +13,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Structs and Algos -->
+    <string name="structs_and_algos_stack_input_hint">Enter value for Stack</string>
+
 </resources>

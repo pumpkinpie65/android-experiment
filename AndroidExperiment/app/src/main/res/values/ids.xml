@@ -5,6 +5,7 @@
     <item type="id" name="edittext" />
     <item type="id" name="fab" />
     <item type="id" name="recyclerview" />
+    <item type="id" name="textinputlayout" />
     <item type="id" name="textview" />
     <item type="id" name="toolbar" />
 </resources>
