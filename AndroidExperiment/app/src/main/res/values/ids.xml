@@ -2,6 +2,8 @@
 <resources>
     <item type="id" name="button" />
     <item type="id" name="constraintlayout" />
+    <item type="id" name="container_bottom" />
+    <item type="id" name="container_main" />
     <item type="id" name="edittext" />
     <item type="id" name="fab" />
     <item type="id" name="recyclerview" />

@@ -23,11 +23,7 @@ import com.pumpkinpie65.androidexperiment.R;
 
 import java.util.Stack;
 
-public class StructsAndAlgosActivity extends AppCompatActivity implements View.OnClickListener {
-
-    TextInputLayout textInputLayout;
-    TextInputEditText textInputEditText;
-    View button;
+public class StructsAndAlgosActivity extends AppCompatActivity {
 
     private StackViewModel stackViewModel;
 
@@ -42,11 +38,9 @@ public class StructsAndAlgosActivity extends AppCompatActivity implements View.O
 
         setContentView(R.layout.structs_and_algos_activity);
 
-        textInputLayout = findViewById(R.id.textinputlayout);
-        textInputEditText = findViewById(R.id.edittext);
-        button = findViewById(R.id.button);
-
-        button.setOnClickListener(this);
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.container_bottom, StackInputFragment.newInstance(), StackInputFragment.TAG)
+                .commit();
 
         stackViewModel = ViewModelProviders.of(this).get(StackViewModel.class);
 
@@ -80,13 +74,6 @@ public class StructsAndAlgosActivity extends AppCompatActivity implements View.O
 
             }
         });
-
-    }
-
-    @Override
-    public void onClick(View view) {
-
-        stackViewModel.push(textInputEditText.getText().toString());
 
     }
 
