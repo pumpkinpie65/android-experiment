@@ -26,10 +26,6 @@
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".constraintlayoutinrecyclerview.ConstraintLayoutInRecyclerViewActivity"
-            android:label="@string/title_activity_constraintlayout_in_recyclerview"
-            android:parentActivityName=".MainActivity" />
-        <activity
             android:name=".structsandalgos.StructsAndAlgosActivity" />
     </application>
 

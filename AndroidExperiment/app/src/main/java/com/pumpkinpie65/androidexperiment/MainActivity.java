@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.pumpkinpie65.androidexperiment.constraintlayoutinrecyclerview.ConstraintLayoutInRecyclerViewActivity;
 import com.pumpkinpie65.androidexperiment.modernfeed.ModernFeedActivity;
 import com.pumpkinpie65.androidexperiment.structsandalgos.StructsAndAlgosActivity;
 
@@ -47,11 +46,6 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.menu_modern_feed) {
             Intent intent = new Intent(this, ModernFeedActivity.class);
             startActivity(intent);
-            return true;
-        }
-
-        if (id == R.id.menu_constraintlayout_in_recyclerview) {
-            startActivity(ConstraintLayoutInRecyclerViewActivity.newIntent(this));
             return true;
         }
 
