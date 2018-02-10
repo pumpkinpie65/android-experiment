@@ -67,23 +67,7 @@ public class StackDisplayFragment extends Fragment {
             @Override
             public void onChanged(@Nullable Stack<String> strings) {
 
-                Stack<String> otherStack = new Stack<>();
-                ArrayList<String> items = new ArrayList<>();
-
-                while (!strings.isEmpty()) {
-                    otherStack.push(strings.pop());
-                }
-
-                while (!otherStack.isEmpty()) {
-
-                    String item = otherStack.pop();
-
-                    items.add(item);
-                    strings.push(item);
-
-                }
-
-                recyclerView.setAdapter(new RecyclerViewAdapter(items.toArray(new String[items.size()])));
+                recyclerView.setAdapter(new StackAdapter(strings));
 
             }
         });
