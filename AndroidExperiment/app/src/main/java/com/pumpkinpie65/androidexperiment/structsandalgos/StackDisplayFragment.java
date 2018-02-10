@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,6 +50,12 @@ public class StackDisplayFragment extends Fragment {
 
         recyclerView = (RecyclerView) inflater.inflate(R.layout.layout_recyclerview, container, false);
 
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        recyclerView.setHasFixedSize(true);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
         return recyclerView;
     }
 
@@ -75,8 +82,6 @@ public class StackDisplayFragment extends Fragment {
                     strings.push(item);
 
                 }
-
-                Toast.makeText(getActivity(), "trying to show " + items.toArray(new String[items.size()]).length + " strings", Toast.LENGTH_LONG).show();
 
                 recyclerView.setAdapter(new RecyclerViewAdapter(items.toArray(new String[items.size()])));
 
