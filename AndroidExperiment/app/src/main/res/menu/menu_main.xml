@@ -1,22 +1,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
-    <item
-        android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="100"
-        app:showAsAction="never" />
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".dashboard.DashboardActivity">
 
     <item
         android:id="@+id/menu_recycleview"
-        android:title="@string/menu_recyclerview" />
+        android:title="@string/recyclerview_title" />
 
     <item
         android:id="@+id/menu_modern_feed"
-        android:title="@string/menu_modern_feed" />
+        android:title="@string/modern_feed_title" />
 
     <item
         android:id="@+id/menu_structsandalgos"
-        android:title="@string/menu_structsandalgos" />
+        android:title="@string/structs_and_algos_title" />
 
 </menu>

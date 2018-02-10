@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".dashboard.DashboardActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,17 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".RecyclerViewActivity"
-            android:label="@string/title_activity_recyclerview"
-            android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".modernfeed.ModernFeedActivity"
-            android:label="@string/title_activity_modern_feed"
-            android:parentActivityName=".MainActivity"
+            android:label="@string/modern_feed_title"
+            android:parentActivityName=".dashboard.DashboardActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
-            android:name=".structsandalgos.StructsAndAlgosActivity" />
+            android:name=".recyclerview.RecyclerViewActivity"
+            android:label="@string/recyclerview_title"
+            android:parentActivityName=".dashboard.DashboardActivity" />
+
+        <activity
+            android:name=".structsandalgos.StructsAndAlgosActivity"
+            android:label="@string/structs_and_algos_title" />
+
     </application>
 
 </manifest>

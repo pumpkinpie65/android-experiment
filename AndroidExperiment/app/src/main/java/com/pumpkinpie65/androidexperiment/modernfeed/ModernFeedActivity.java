@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.pumpkinpie65.androidexperiment.R;
-import com.pumpkinpie65.androidexperiment.RecyclerViewAdapter;
+import com.pumpkinpie65.androidexperiment.recyclerview.RecyclerViewAdapter;
 
 public class ModernFeedActivity extends AppCompatActivity {
 
@@ -19,7 +19,7 @@ public class ModernFeedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_modern_feed);
+        setContentView(R.layout.modern_feed_activity);
         findAllViewsById();
         setSupportActionBar(toolbar);
 
