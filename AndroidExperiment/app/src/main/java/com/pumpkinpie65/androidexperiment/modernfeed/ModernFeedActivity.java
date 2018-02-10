@@ -1,12 +1,15 @@
 package com.pumpkinpie65.androidexperiment.modernfeed;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.pumpkinpie65.androidexperiment.R;
+import com.pumpkinpie65.androidexperiment.recyclerview.RecyclerViewActivity;
 import com.pumpkinpie65.androidexperiment.recyclerview.RecyclerViewAdapter;
 
 public class ModernFeedActivity extends AppCompatActivity {
@@ -15,6 +18,11 @@ public class ModernFeedActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     private RecyclerViewAdapter recyclerViewAdapter;
+
+    public static Intent newIntent(Context context) {
+        Intent intent = new Intent(context, ModernFeedActivity.class);
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

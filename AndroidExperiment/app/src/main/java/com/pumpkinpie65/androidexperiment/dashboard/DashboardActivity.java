@@ -1,6 +1,5 @@
 package com.pumpkinpie65.androidexperiment.dashboard;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -35,14 +34,12 @@ public class DashboardActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.menu_recycleview) {
-            Intent intent = new Intent(this, RecyclerViewActivity.class);
-            startActivity(intent);
+            startActivity(RecyclerViewActivity.newIntent(this));
             return true;
         }
 
         if (id == R.id.menu_modern_feed) {
-            Intent intent = new Intent(this, ModernFeedActivity.class);
-            startActivity(intent);
+            startActivity(ModernFeedActivity.newIntent(this));
             return true;
         }
 
