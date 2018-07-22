@@ -17,7 +17,7 @@ public class StructsAndAlgosActivity extends AppCompatActivity {
     public static final int TYPE_STACK = 1;
     public static final int TYPE_MERGESORT = 2;
 
-    private int type = TYPE_STACK;
+    private int type = TYPE_MERGESORT;
 
     public static Intent newIntent(Context context) {
         Intent intent = new Intent(context, StructsAndAlgosActivity.class);

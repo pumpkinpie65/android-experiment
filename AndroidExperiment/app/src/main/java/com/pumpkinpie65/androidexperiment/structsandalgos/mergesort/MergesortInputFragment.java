@@ -1,5 +1,6 @@
 package com.pumpkinpie65.androidexperiment.structsandalgos.mergesort;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,6 +18,8 @@ public class MergesortInputFragment extends Fragment implements View.OnClickList
 
     public static final String TAG = MergesortInputFragment.class.getSimpleName();
 
+    MergesortViewModel mergesortViewModel;
+
     TextInputLayout textInputLayout;
     TextInputEditText textInputEditText;
     View addButton;
@@ -30,6 +33,8 @@ public class MergesortInputFragment extends Fragment implements View.OnClickList
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        mergesortViewModel = ViewModelProviders.of(getActivity()).get(MergesortViewModel.class);
 
         View view = inflater.inflate(R.layout.structs_and_algos_mergesort_input_fragment, container, false);
 
@@ -48,7 +53,7 @@ public class MergesortInputFragment extends Fragment implements View.OnClickList
     public void onClick(View view) {
 
         if (view == addButton) {
-            Toast.makeText(getActivity(), "Add button clicked", Toast.LENGTH_SHORT).show();
+            mergesortViewModel.addData(textInputEditText.getText().toString());
         } else if (view == sortButton) {
             Toast.makeText(getActivity(), "Sort button clickced", Toast.LENGTH_SHORT).show();
         }
