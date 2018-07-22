@@ -11,6 +11,9 @@
 
     <!-- Structs and Algos -->
     <string name="structs_and_algos_title">Structs And Algos</string>
+    <string name="structs_and_algos_mergesort_button_add">Add value to collection</string>
+    <string name="structs_and_algos_mergesort_button_sort">Sort values</string>
+    <string name="structs_and_algos_mergesort_input_hint">Enter values to sort</string>
     <string name="structs_and_algos_stack_input_hint">Enter value for Stack</string>
 
 </resources>
