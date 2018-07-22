@@ -1,19 +1,20 @@
 package com.pumpkinpie65.androidexperiment.structsandalgos;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
 import com.pumpkinpie65.androidexperiment.R;
 import com.pumpkinpie65.androidexperiment.structsandalgos.stack.StackDisplayFragment;
 import com.pumpkinpie65.androidexperiment.structsandalgos.stack.StackInputFragment;
-import com.pumpkinpie65.androidexperiment.structsandalgos.stack.StackViewModel;
 
 public class StructsAndAlgosActivity extends AppCompatActivity {
 
-    private StackViewModel stackViewModel;
+    public static final int TYPE_STACK = 1;
+
+    private int type = TYPE_STACK;
 
     public static Intent newIntent(Context context) {
         Intent intent = new Intent(context, StructsAndAlgosActivity.class);
@@ -26,16 +27,28 @@ public class StructsAndAlgosActivity extends AppCompatActivity {
 
         setContentView(R.layout.structs_and_algos_activity);
 
+        switch (type) {
+            case (TYPE_STACK):
+            default:
+
+                addFragmentToMainContainer(StackDisplayFragment.newInstance(), StackDisplayFragment.TAG);
+                addFragmentToBottomContainer(StackInputFragment.newInstance(), StackInputFragment.TAG);
+
+                break;
+        }
+
+    }
+
+    private void addFragmentToMainContainer(Fragment fragment, String tag) {
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.container_main, StackDisplayFragment.newInstance(), StackDisplayFragment.TAG)
+                .add(R.id.container_main, fragment, tag)
                 .commit();
+    }
 
+    private void addFragmentToBottomContainer(Fragment fragment, String tag) {
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.container_bottom, StackInputFragment.newInstance(), StackInputFragment.TAG)
+                .add(R.id.container_bottom, fragment, tag)
                 .commit();
-
-        stackViewModel = ViewModelProviders.of(this).get(StackViewModel.class);
-
     }
 
 }
