@@ -1,4 +1,4 @@
-package com.pumpkinpie65.androidexperiment.structsandalgos;
+package com.pumpkinpie65.androidexperiment.structsandalgos.stack;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatTextView;

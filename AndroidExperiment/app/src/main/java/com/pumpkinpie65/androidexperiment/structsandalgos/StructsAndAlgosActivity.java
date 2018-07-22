@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.pumpkinpie65.androidexperiment.R;
+import com.pumpkinpie65.androidexperiment.structsandalgos.stack.StackDisplayFragment;
+import com.pumpkinpie65.androidexperiment.structsandalgos.stack.StackInputFragment;
+import com.pumpkinpie65.androidexperiment.structsandalgos.stack.StackViewModel;
 
 public class StructsAndAlgosActivity extends AppCompatActivity {
 
