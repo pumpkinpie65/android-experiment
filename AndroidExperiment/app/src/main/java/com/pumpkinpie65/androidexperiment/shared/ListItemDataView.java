@@ -1,4 +1,4 @@
-package com.pumpkinpie65.androidexperiment.structsandalgos.stack;
+package com.pumpkinpie65.androidexperiment.shared;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatTextView;
@@ -7,25 +7,25 @@ import android.view.Gravity;
 import android.view.ViewGroup;
 
 /**
- * View for displaying individual data from the Stack
+ * View for displaying individual data within a vertical list
  */
 
-public class StackDataView<T> extends AppCompatTextView {
+public class ListItemDataView<T> extends AppCompatTextView {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public StackDataView stackDataView;
+        public ListItemDataView listItemDataView;
 
-        public ViewHolder(StackDataView stackDataView) {
-            super(stackDataView);
-            this.stackDataView = stackDataView;
+        public ViewHolder(ListItemDataView listItemDataView) {
+            super(listItemDataView);
+            this.listItemDataView = listItemDataView;
         }
 
     }
 
-    private T dataItem;
+    protected T dataItem;
 
-    public StackDataView(Context context) {
+    public ListItemDataView(Context context) {
         super(context);
         setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         setGravity(Gravity.CENTER_HORIZONTAL);
