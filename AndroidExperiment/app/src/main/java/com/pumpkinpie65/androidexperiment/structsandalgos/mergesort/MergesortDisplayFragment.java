@@ -47,9 +47,9 @@ public class MergesortDisplayFragment extends Fragment {
 
         recyclerView.setAdapter(dataListAdapter);
 
-        mergesortViewModel.getData().observe(this, new Observer<List>() {
+        mergesortViewModel.getData().observe(this, new Observer<List<Comparable>>() {
             @Override
-            public void onChanged(@Nullable List list) {
+            public void onChanged(@Nullable List<Comparable> list) {
                 dataListAdapter.setData(list);
                 dataListAdapter.notifyDataSetChanged();
             }

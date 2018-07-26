@@ -10,7 +10,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.pumpkinpie65.androidexperiment.R;
 
@@ -54,8 +53,9 @@ public class MergesortInputFragment extends Fragment implements View.OnClickList
 
         if (view == addButton) {
             mergesortViewModel.addData(textInputEditText.getText().toString());
+            textInputEditText.setText("");
         } else if (view == sortButton) {
-            Toast.makeText(getActivity(), "Sort button clickced", Toast.LENGTH_SHORT).show();
+            mergesortViewModel.sortData();
         }
 
     }
